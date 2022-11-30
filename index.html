@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noticias</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="module" src="js/index.js" defer></script>
+        <script src="./js/procura.js" defer></script>
+        <script>
+        
+       
+        function verificaOutroRegistro(id){
+
+            const arrayNoticiasNovo = JSON.parse(localStorage.getItem('noticias'))
+            const node3 = document.getElementById(`${id}`)
+
+            for(let i = 0; i < arrayNoticiasNovo.length; i++){
+                if(arrayNoticiasNovo[i].id == id){
+                    arrayNoticiasNovo.splice(i, 1)
+                   node3.parentNode.removeChild(node3)
+                   localStorage.setItem('noticias', JSON.stringify(arrayNoticiasNovo))
+                }
+            }
+        }
+
+        function apagar (id){
+            let arrayPrincipal = JSON.parse(localStorage.getItem('principal'))
+            const footer = document.querySelector('.footer')
+
+            if(arrayPrincipal.length <= 3 || arrayPrincipal.length == 0){
+                console.log('entrou na comparação')
+                document.body.style.height = '100vh'
+                document.body.style.position = 'relative'
+
+                footer.style.position  = 'absolute'
+               
+            }
+            const node2 = document.getElementById(`${id}`)
+
+            arrayPrincipal.forEach(element => {
+               
+                if(element.id == id){
+                    
+                    arrayPrincipal.splice(element, 1)
+                    node2.parentNode.removeChild(node2)
+                    localStorage.setItem('principal', JSON.stringify(arrayPrincipal))
+
+                }else{
+                    verificaOutroRegistro(id)
+                }
+            })
+                //id == element.id ? node2.parentNode.removeChild(node2) : verificaOutroRegistro(id) })
+        }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="#logo">LOGO</a>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li>
+                        <a href="cadastrar.html">Cadastrar Noticias</a>
+                    </li>
+                    <li>
+                        <a href="#">Exibir Noticias</a>
+                    </li>
+                </ul>
+            </nav>
+            <form class="form">
+                <input class="input" type="search" placeholder="Pesquisar noticia...">
+                <button class="btnPesquisa" type="button">
+                    <img src="menu.png" alt="">
+                </button>
+            </form>
+        </header>
+        
+        <nav class="navHamburguer">
+            <ul class="menu_2">
+                <li>
+                    <a href="cadastrar.html">Cadastrar Noticias</a>
+                </li>
+                <li>
+                    <a href="#">Exibir Noticias</a>
+                </li>
+            </ul>
+            <form class="formHamburguer">
+                <input class="input_2" type="search" placeholder="Pesquisar noticia...">
+            </form>
+        </nav>
+            
+        <section class="grid">
+        </section>
+        <footer class="footer">
+            <h3>Programado por Wesley Marques</h3>
+        </footer>
+
+    </body>
+</html>

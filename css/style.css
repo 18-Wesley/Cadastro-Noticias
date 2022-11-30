@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0,0,.8);
+}
+.footer{
+    width: 100%;
+    bottom: 0;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color:black;
+    margin-top: 100px;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0,0,.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    width: 20%;
+    text-align: center;
+}
+.logo a{
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+}
+.nav{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    margin: 0 5px;
+    border-radius: 7px;
+    margin-right: 40px;
+    transition: 700ms;
+    padding: 2px 23px;
+    letter-spacing: 1px;
+
+}
+.nav ul li a:hover{
+    background: white;
+    color: black;
+}
+
+.form{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form .btn-pesquisa img{
+    width: 24px;
+    height: 24px;
+}
+.form .btn-pesquisa{
+    border-radius: 7px;
+    right: 0;
+}
+.input{
+    border-radius: 10px;
+    padding:6px;
+    width: 60%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 410px);
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.btnPesquisa{
+    width: 60x;
+    height: 50px;
+    background-color: white;
+    padding: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+}
+.btnPesquisa img{
+    width: 100%;
+    height: 100%;
+}
+.formHamburguer{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.formHamburguer .input_2{
+    text-align: center;
+    border-radius: 10px;
+    padding:6px;
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+.navHamburguer{
+    display: none;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color:black;
+    text-align: center;
+    
+}
+.menu_2{
+    list-style-type: none;
+    display: none;
+}
+.menu_2 li{
+    margin-bottom: 20px;
+}
+.menu_2 a{
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    font-size: 19px;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 1500px ){
+    .grid{
+        grid-template-columns: repeat(2, 510px);
+    }
+}
+@media (max-width: 1140px ){
+    .grid{
+        grid-template-columns: repeat(2, 400px);
+    }
+    .menu{
+        display: none;
+    }
+    .input{
+        display: none;
+    }
+    .btnPesquisa{
+        display: flex;
+    }
+    .ativar {
+        display: flex;
+    }
+    .ativar .menu_2{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 890px ){
+    .grid{
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+@media (max-width: 780px ){
+    .grid{
+        grid-template-columns: repeat(1, 450px);
+    }
+    .header{
+        padding: 0 40px ;
+    }
+}
+@media (max-width: 490px ){
+    .grid{
+        grid-template-columns: repeat(1, 300px);
+    }
+    .header{
+        padding: 0 50px ;
+    }
+}
+.card{
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: 700ms;
+    margin: 10px;
+    gap: 15px;
+}
+.card:hover{
+    box-shadow: 2px 2px 4px rgba(0, 0,0,.5);
+}
+.titulo{
+    text-align: center;
+}
+h2{
+    font-size: 22px;
+    font-weight: bold;
+}
+.noticia{
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+.acessar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    width: 40%;
+    padding: 6px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+h3{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 21px;
+    color: white;
+}
+.excluir{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    background-position: center;
+    background-size: cover;
+    right: 5px;
+}
+.excluir .btnApagar{
+    padding: 5px;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    
+}
+.excluir .btnApagar .img{
+    width: 100%;
+    height: 100%;
+}
+.noticiario{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    height: 600px;
+}
+.container_noticiario{
+    display: flex;
+    width: 100%;
+}
+.texto_noticia{
+    width: 40%;
+}
+.conteudo_img{
+    width: 50%;
+}
+.conteudo_img img{
+    width: 100%;
+    height: 100%;
+}
+.bordar{
+    border: 8px solid red;
+}
+
+

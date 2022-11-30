@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noticias</title>
+        <link rel="stylesheet" href="css/cadastrar.css">
+        <script  src="js/cadastro.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="#logo">LOGO</a>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li>
+                        <a href="cadastrar.html">Cadastrar Noticias</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Exibir Noticias</a>
+                    </li>
+                </ul>
+                <form class="form">
+                    <button class="btnPesquisa" type="button">
+                        <img src="menu.png" alt="">
+                    </button>
+                </form>
+            </nav>
+        </header>
+        
+        <nav class="navHamburguer">
+            <ul class="menu_2">
+                <li>
+                    <a href="#">Cadastrar Noticias</a>
+                </li>
+                <li>
+                    <a href="index.html">Exibir Noticias</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="grid-form">
+            <form class="cadastro">
+               <div class="titulo_noticia">
+                    <label for="titulo">Titulo: </label>
+
+                    <input type="text" placeholder="digite um titulo..." id="titulo2" class="titulo2">
+               </div>
+                <div class="noticia_cadastro">
+                    <textarea name="text-area" id="textarea" class="text_area" placeholder="Cadastrar sua noticia aqui!!" cols="50" rows="5"></textarea>
+                </div>
+                <div class="palavraChaveContainer">
+                    <input type="text" class="palavraChave" placeholder="Digite uma palavra chave, serve para usar na busca de noticias">
+                    <span>Valido somente para noticias com cadastro feito pelo usuario.</span>
+                </div>
+                <button type="button" id="btn_2" class="btn_2">Cadastrar</button>
+
+            </form>
+        </section>
+        <footer class="footer">
+            <h3>Programado por Wesley Marques</h3>
+        </footer>
+    </body>
+</html>
